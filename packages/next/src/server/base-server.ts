@@ -1765,6 +1765,7 @@ export default abstract class Server<ServerOptions extends Options = Options> {
     const isServerAction = getIsServerAction(req)
     const hasGetInitialProps = !!components.Component?.getInitialProps
     let isSSG = !!components.getStaticProps
+    let couldBeIntercepted = false
 
     // Compute the iSSG cache key. We use the rewroteUrl since
     // pages with fallback: false are allowed to be rewritten to
@@ -2000,11 +2001,9 @@ export default abstract class Server<ServerOptions extends Options = Options> {
     if (isAppPath) {
       res.setHeader('vary', RSC_VARY_HEADER)
 
-      const couldBeIntercepted = this.interceptionRouteRewrites?.some(
-        (rewrite) => {
-          return new RegExp(rewrite.regex).test(resolvedUrlPathname)
-        }
-      )
+      couldBeIntercepted = this.interceptionRouteRewrites?.some((rewrite) => {
+        return new RegExp(rewrite.regex).test(resolvedUrlPathname)
+      })
 
       // Interception route responses can vary based on the `Next-URL` header as they're rewritten to different components.
       // This means that multiple route interception responses can resolve to the same URL. We use the Vary header to signal this
@@ -2244,6 +2243,7 @@ export default abstract class Server<ServerOptions extends Options = Options> {
         isDraftMode: isPreviewMode,
         isServerAction,
         postponed,
+        couldBeIntercepted,
       }
 
       // Legacy render methods will return a render result that needs to be

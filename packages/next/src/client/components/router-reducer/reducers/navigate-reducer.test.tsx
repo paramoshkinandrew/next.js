@@ -163,8 +163,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking', 'https://localhost') as any,
     })
     const action: NavigateAction = {
@@ -254,6 +254,30 @@ describe('navigateReducer', () => {
         },
         "nextUrl": "/linking/about",
         "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
           "/linking/about" => {
             "data": Promise {},
             "key": "/linking/about",
@@ -357,8 +381,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking', 'https://localhost') as any,
     })
 
@@ -449,6 +473,30 @@ describe('navigateReducer', () => {
         },
         "nextUrl": "/linking/about",
         "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
           "/linking/about" => {
             "data": Promise {},
             "key": "/linking/about",
@@ -552,8 +600,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking', 'https://localhost') as any,
     })
 
@@ -615,7 +663,32 @@ describe('navigateReducer', () => {
           "segmentPaths": [],
         },
         "nextUrl": "/linking",
-        "prefetchCache": Map {},
+        "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
+        },
         "pushRef": {
           "mpaNavigation": true,
           "pendingPush": true,
@@ -689,8 +762,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking', 'https://localhost') as any,
     })
 
@@ -752,7 +825,32 @@ describe('navigateReducer', () => {
           "segmentPaths": [],
         },
         "nextUrl": "/linking",
-        "prefetchCache": Map {},
+        "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
+        },
         "pushRef": {
           "mpaNavigation": true,
           "pendingPush": false,
@@ -826,8 +924,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking#hash', 'https://localhost') as any,
     })
 
@@ -878,7 +976,7 @@ describe('navigateReducer', () => {
             </body>
           </html>,
         },
-        "canonicalUrl": "",
+        "canonicalUrl": "/linking#hash",
         "focusAndScrollRef": {
           "apply": false,
           "hashFragment": null,
@@ -890,7 +988,7 @@ describe('navigateReducer', () => {
           "/linking" => {
             "data": Promise {},
             "key": "/linking",
-            "kind": "temporary",
+            "kind": "auto",
             "lastUsedTime": 1690329600000,
             "prefetchTime": 1690329600000,
             "treeAtTimeOfPrefetch": [
@@ -992,8 +1090,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking', 'https://localhost') as any,
     })
 
@@ -1114,6 +1212,30 @@ describe('navigateReducer', () => {
         },
         "nextUrl": "/linking/about",
         "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
           "/linking/about" => {
             "data": Promise {},
             "key": "/linking/about",
@@ -1261,8 +1383,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/parallel-tab-bar', 'https://localhost') as any,
     })
 
@@ -1369,6 +1491,38 @@ describe('navigateReducer', () => {
         },
         "nextUrl": "/parallel-tab-bar/demographics",
         "prefetchCache": Map {
+          "/parallel-tab-bar" => {
+            "data": Promise {},
+            "key": "/parallel-tab-bar",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "parallel-tab-bar",
+                  {
+                    "audience": [
+                      "__PAGE__",
+                      {},
+                    ],
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                    "views": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              null,
+              null,
+              true,
+            ],
+          },
           "/parallel-tab-bar/demographics" => {
             "data": Promise {},
             "key": "/parallel-tab-bar/demographics",
@@ -1488,8 +1642,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking#hash', 'https://localhost') as any,
     })
 
@@ -1548,7 +1702,32 @@ describe('navigateReducer', () => {
           "segmentPaths": [],
         },
         "nextUrl": "/linking",
-        "prefetchCache": Map {},
+        "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
+        },
         "pushRef": {
           "mpaNavigation": false,
           "pendingPush": true,
@@ -1622,8 +1801,8 @@ describe('navigateReducer', () => {
       initialHead: null,
       initialCanonicalUrl,
       initialSeedData: ['', {}, children],
+      initialFlightData: [['']],
       initialParallelRoutes,
-      isServer: false,
       location: new URL('/linking', 'https://localhost') as any,
     })
     const action: NavigateAction = {
@@ -1713,6 +1892,30 @@ describe('navigateReducer', () => {
         },
         "nextUrl": "/linking/about",
         "prefetchCache": Map {
+          "/linking" => {
+            "data": Promise {},
+            "key": "/linking",
+            "kind": "auto",
+            "lastUsedTime": null,
+            "prefetchTime": 1690329600000,
+            "treeAtTimeOfPrefetch": [
+              "",
+              {
+                "children": [
+                  "linking",
+                  {
+                    "children": [
+                      "__PAGE__",
+                      {},
+                    ],
+                  },
+                ],
+              },
+              undefined,
+              undefined,
+              true,
+            ],
+          },
           "/linking/about" => {
             "data": Promise {},
             "key": "/linking/about",
