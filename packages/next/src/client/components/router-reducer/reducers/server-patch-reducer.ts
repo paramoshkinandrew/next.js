@@ -13,12 +13,14 @@ import { handleMutable } from '../handle-mutable'
 import type { CacheNode } from '../../../../shared/lib/app-router-context.shared-runtime'
 import { createEmptyCacheNode } from '../../app-router'
 import { handleSegmentMismatch } from '../handle-segment-mismatch'
+import { createPrefetchCacheKey } from './prefetch-cache-utils'
 
 export function serverPatchReducer(
   state: ReadonlyReducerState,
   action: ServerPatchAction
 ): ReducerState {
-  const { flightData, overrideCanonicalUrl } = action
+  const { serverResponse, url } = action
+  const [flightData, overrideCanonicalUrl, , intercept] = serverResponse
 
   const mutable: Mutable = {}
 
@@ -78,6 +80,19 @@ export function serverPatchReducer(
 
     currentCache = cache
     currentTree = newTree
+  }
+
+  const prefetchCacheKey = createPrefetchCacheKey(
+    url,
+    // routes that could be intercepted / are interception routes get prefixed with the nextUrl
+    intercept ? state.nextUrl : undefined
+  )
+  const prefetchValues = state.prefetchCache.get(prefetchCacheKey)
+
+  // If we applied a patch from the server, we want to renew the prefetch cache entry
+  // Otherwise it'll remain stale and we'll keep refetching the page data
+  if (prefetchValues) {
+    prefetchValues.lastUsedTime = Date.now()
   }
 
   return handleMutable(state, mutable)
